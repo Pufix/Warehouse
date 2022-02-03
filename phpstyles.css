@@ -1,0 +1,42 @@
+.scrollmenu {
+	height: 6.5%;
+	width='100%';
+  	overflow: auto;
+  	white-space: nowrap;
+}
+.scrollmenu a {
+  	display: inline-block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px;
+  	text-decoration: none;
+}
+.scrollmenu a:hover {
+  	background-color: #777;
+}
+body {
+  	margin: 0;
+  	padding: 0;
+}
+.tabelindex{
+	height:93%;
+	width:100%; 
+}
+.tabelindex td{
+	background-color: #6e6e6e;
+	width=95%;
+}
+body {
+	background-color: #3f3f3f;
+}
+.tabelindexmic{
+	
+}
+.tabelindexmic tr{
+	color: #3f3f3f;
+    background: #ffffff;
+}
+.tabelindexmic tr:nth-child(odd){
+	color: #3f3f3f;
+    background: #E6E4E4;
+}
