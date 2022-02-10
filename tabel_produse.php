@@ -1,22 +1,38 @@
 <html>
     <head>
         <title>Tabel produse</title>
-        <style>
-        table, th, td {
-          border: 1px solid pink;
-        }
-		</style>
+        
 		<link rel="stylesheet" href="phpstyles.css">
     </head>
     <body>
-		<div class="scrollmenu">
+		<div class="navbar"><center>
 		  	<a href="index.php">Home</a>
-		  	<a href="tabel_produse.php">Produse actuale</a>
+		  	<div class="dropdown">
+				<button class="dropbtn">Produse</button>
+				<div class="dropdown-content">
+					<?php
+						$conn = new mysqli("localhost","root","12mii2021","depozit_atestat");    
+						if ($conn->connect_error) {
+						  die("Connection failed: " . $conn->connect_error);
+						}
+						$sql="SELECT DISTINCT produse.categorie FROM produse";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0)
+						  while($row = $result->fetch_assoc()) {
+							echo "<a href='tabel_produse.php?categorie=". $row["categorie"] ."'>". $row["categorie"] ."</a>";
+						  }
+						  else 
+							echo "0 results";
+
+
+					?>
+				</div>
+			</div>
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere produse</a>
 			<a href="produs_nou.php">Produs nou</a>
-		</div> 
-        <table>
+		</center></div>
+        <table class="tabelprod">
             <tr>
                 <th>
                     id
@@ -25,36 +41,43 @@
                     nume
                 </th>
                 <th>
-                    codfurn
+                    pret
                 </th>
                 <th>
-                    numefurn
+                    producator
                 </th>
+				<th>
+					stock
+				</th>
+				<th>
+					categorie
+				</th>
             </tr>
             <br>
             <?php
-                $conn = new mysqli("localhost","root","12mii2021","magazin");    
+                $conn = new mysqli("localhost","root","12mii2021","depozit_atestat");    
                 if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "SELECT * FROM produse";
+				$categorie = $_REQUEST['categorie'];
+                $sql = "SELECT * FROM produse WHERE produse.categorie='";
+				$sql .= $categorie;
+				$sql .="'";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0)
                   while($row = $result->fetch_assoc()) {
-                    echo "<tr><th>";
-                    echo "" . $row["codp"] . "";
-                    echo "</th><th>";
-                    echo "" . $row["denumire"] ."";
-                    echo "</th><th>";
-                    echo "" . $row["codf"] ."";
-                    echo "</th><th>";
-                    $codfurn = $row["codf"];
-                    $sql2 ="SELECT * FROM furnizori WHERE `codf` = $codfurn";
-                    $result2 = $conn->query($sql2);
-                    if($result2 ->num_rows ==0)
-                        echo " error name furn";
-                    else
-                        echo "" . $result2->fetch_assoc()["nume"] . "";
+                    echo "<tr><td>";
+                    echo "" . $row["id"] . "";
+                    echo "</td><td>";
+					echo "" . $row["denumire"] . "";
+                    echo "</td><td>";
+                    echo "" . $row["pret"] ."";
+                    echo "</td><td>";
+                    echo "" . $row["producator"] ."";
+                    echo "</td><td>";
+					echo "" . $row["stock"] ."";
+                    echo "</td><td>";
+                    echo "" . $row["categorie"] ."";
                     echo "</th></tr>";
                   }
                   else 

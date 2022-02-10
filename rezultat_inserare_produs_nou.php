@@ -1,10 +1,6 @@
 <html>
     <head>
-        <title></title>
-        <style>
-        table, th, td {
-          border: 1px solid pink;
-        }</style>
+		<title></title>
 		<link rel="stylesheet" href="phpstyles.css">
     </head>
     <body>
