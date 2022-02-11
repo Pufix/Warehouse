@@ -31,26 +31,26 @@
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere produse</a>
 			<a href="produs_nou.php">Produs nou</a>
-		</center></div>
-        <table class="tabelprod">
-            <tr>
+		</center></div><center>
+        <table class="tabelprod" style="" cellspacing=0>
+            <tr class="headtabelprod">
                 <th>
-                    id
+                    Id
                 </th>
                 <th>
-                    nume
+                    Nume
                 </th>
                 <th>
-                    pret
+                    Pret
                 </th>
                 <th>
-                    producator
+                    Producator
                 </th>
 				<th>
-					stock
+					Stock
 				</th>
 				<th>
-					categorie
+					Categorie
 				</th>
             </tr>
             <br>
@@ -68,7 +68,7 @@
                   while($row = $result->fetch_assoc()) {
                     echo "<tr><td>";
                     echo "" . $row["id"] . "";
-                    echo "</td><td>";
+                    echo ".</td><td>";
 					echo "" . $row["denumire"] . "";
                     echo "</td><td>";
                     echo "" . $row["pret"] ."";
@@ -83,6 +83,6 @@
                   else 
                     echo "0 results";
             ?>
-		</table>
+		</table></center>
     </body>
 </html>
