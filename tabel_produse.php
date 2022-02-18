@@ -32,7 +32,7 @@
 		 	<a href="output.php">Trimitere produse</a>
 			<a href="produs_nou.php">Produs nou</a>
 		</center></div><center>
-        <table class="tabelprod" style="" cellspacing=0>
+        <table class="tabelprod" style="zoom: 2; -moz-transform: scale(2); -moz-transform-origin: 0 0;" cellspacing=0>
             <tr class="headtabelprod">
                 <th>
                     Id
