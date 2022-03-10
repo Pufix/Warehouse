@@ -71,7 +71,7 @@
                     echo ".</td><td>";
 					echo "" . $row["denumire"] . "";
                     echo "</td><td>";
-                    echo "" . $row["pret"] ."";
+                    echo "" . $row["pret"] ." RON";
                     echo "</td><td>";
                     echo "" . $row["producator"] ."";
                     echo "</td><td>";

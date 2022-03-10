@@ -3,7 +3,7 @@
 	width: 100%;
   	overflow:hidden;
 	padding: 0;	
-	font-size:2vw;
+	font-size:2vw;   
 }
 .navbar a,.dropdown,.dropbtn  {
   	display: inline-block;

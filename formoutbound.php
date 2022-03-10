@@ -30,9 +30,10 @@
 					if($cant >0){
 						mysqli_query($conn, $sql);
 						mysqli_query($conn, $sql2);
+						echo '<script>parent.f2.location.reload();</script>';
 					}
 			?>
-			<form action=formoutbound.php  method= POST/GET style="margin: 0;
+			<form action=formoutbound.php method= POST/GET style="margin: 0;
 			  position: absolute;
 			  top: 50%;
 			  left: 50%;

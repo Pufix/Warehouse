@@ -7,6 +7,9 @@
                 <th>
                     Id
                 </th>
+				<th>
+					Stock
+				</th>
                 <th>
                     Nume
                 </th>
@@ -23,6 +26,8 @@
                   while($row = $result->fetch_assoc()) {
                     echo "<tr><td>";
                     echo "" . $row["id"] . "";
+                    echo ".</td><td>";
+					echo "" . $row["stock"] . "";
                     echo ".</td><td>";
 					echo "" . $row["denumire"] . "";
                     echo "</th></tr>";

@@ -36,7 +36,7 @@
 		<table width=100% height=80%>
 			<tr width=100% height=100%>
 				<td width=50% height=100%><iframe style="border:none;" width=100% height=100% src="formoutbound.php"></iframe></td>
-				<td width=50% height=100%><iframe style="border:none;" width=100% height=100% src="allproductsred.php"></iframe></td>
+				<td width=50% height=100%><iframe style="border:none;" width=100% height=100% src="allproductsred.php" id="f2" name="f2"></iframe></td>
 			</tr>
 		</table>
 	</body>
