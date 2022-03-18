@@ -12,7 +12,7 @@
 			<a href="produs_nou.php">Produs nou</a>
 		</div>
         <?php
-            $conn = new mysqli("localhost","root","12mii2021","magazin");    
+            $conn = new mysqli("localhost","root","","magazin");    
             if ($conn->connect_error) {
               die("Connection failed: " . $conn->connect_error);
             }

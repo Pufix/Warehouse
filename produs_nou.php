@@ -12,7 +12,7 @@
 				<button class="dropbtn">Produse</button>
 				<div class="dropdown-content">
 					<?php
-						$conn = new mysqli("localhost","root","12mii2021","depozit_atestat");    
+						$conn = new mysqli("localhost","root","","depozit_atestat");    
 						if ($conn->connect_error) {
 						  die("Connection failed: " . $conn->connect_error);
 						}
@@ -37,7 +37,7 @@
 		<center>
 			<?php
 				ini_set('display_errors', 'Off');
-				$conn = new mysqli("localhost","root","12mii2021","depozit_atestat");    
+				$conn = new mysqli("localhost","root","","depozit_atestat");    
 				if ($conn->connect_error) {
 				  die("Connection failed: " . $conn->connect_error);
 				}
@@ -90,7 +90,7 @@
 					</td></tr>
 					<?php
 						ini_set('display_errors', 'Off');
-						$conn = new mysqli("localhost","root","12mii2021","depozit_atestat");   
+						$conn = new mysqli("localhost","root","","depozit_atestat");   
 						if ($conn->connect_error) {
 						  die("Connection failed: " . $conn->connect_error);
 						}

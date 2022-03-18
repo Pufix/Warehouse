@@ -16,7 +16,7 @@
             </tr>
             <br>
             <?php
-                $conn = new mysqli("localhost","root","12mii2021","depozit_atestat");    
+    $conn = new mysqli("localhost","root","","depozit_atestat");    
                 if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
                 }
