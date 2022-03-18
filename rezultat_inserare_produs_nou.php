@@ -5,7 +5,7 @@
     </head>
     <body>
 		<div class="scrollmenu">
-		  	<a href="index.php">Home</a>
+		  	<a href="index.php">Acasa</a>
 		  	<a href="tabel_produse.php">Produse actuale</a>
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere Produse</a>

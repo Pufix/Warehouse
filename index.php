@@ -1,13 +1,13 @@
 <html>
 	<head>
 		<title>
-			Home
+			Acasa
 		</title>
 		<link rel="stylesheet" href="phpstyles.css">
 	</head>
 	<body>
 		<div class="navbar"><center>
-		  	<a href="index.php">Home</a>
+		  	<a href="index.php">Acasa</a>
 		  	<div class="dropdown">
 				<button class="dropbtn">Produse</button>
 				<div class="dropdown-content">
