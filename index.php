@@ -34,9 +34,9 @@
 			<a href="produs_nou.php">Produs nou</a>
 		</center></div>
 		<table class="tabelindex">
-			<tr width=100% height=100%>
-				<td width=50% height=100%><iframe style="border:none;overflow: hidden;" width=100% height=100% src="comenzirecentein.php"></iframe></td>
-				<td width=50% height=100%><iframe style="border:none;overflow: hidden;" width=100% height=100% src="comenzirecenteout.php"></iframe></td>
+			<tr width=100% height=100% >
+				<td width=50% height=100% style="border: none; padding:0px;"><iframe style="overflow: hidden;" width=100% height=100% src="comenzirecentein.php" frameBorder="0" ></iframe></td>
+				<td width=50% height=100% style="border: none; padding:0px;"><iframe style="overflow: hidden;" width=100% height=100% src="comenzirecenteout.php" frameBorder="0"></iframe></td>
 			</tr>
 		</table>
 	</body>
