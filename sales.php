@@ -32,10 +32,10 @@
 			<a href="produs_nou.php">Produs nou</a>
 			<a href="sales.php">Schimbari pret</a>
 		</center></div>
-		<table class="tabelindex">
-			<tr width=100% height=100% >
-				<td width=50% height=100% style="border: none; padding:0px;"><iframe style="overflow: hidden;" width=100% height=100% src="comenzirecentein.php" frameBorder="0" ></iframe></td>
-				<td width=50% height=100% style="border: none; padding:0px;"><iframe style="overflow: hidden;" width=100% height=100% src="comenzirecenteout.php" frameBorder="0"></iframe></td>
+        <table width=100% height=80%>
+			<tr width=100% height=100%>
+				<td width=50% height=100%><iframe style="border:none;" width=100% height=100% src="formprice.php"></iframe></td>
+				<td width=50% height=100%><iframe style="border:none;" width=100% height=100% src="allproductsblu.php" id="f2" name="f2"></iframe></td>
 			</tr>
 		</table>
 	</body>
