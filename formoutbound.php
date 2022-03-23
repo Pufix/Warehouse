@@ -20,18 +20,22 @@
 				$sql .="', '";
 				$sql .=$furn;
 				$sql .="');";
-				//INSERT INTO `comenziprimite` (`id`, `furnizor`, `cantitate`, `idprod`) VALUES (NULL, NULL, NULL, NULL)
 				$sql2 ="UPDATE `produse` SET `stock` = `stock`-'";
 				$sql2 .=$cant;
 				$sql2 .="' WHERE `produse`.`id` = '";
 				$sql2 .=$idprod;
 				$sql2 .="';";
+				$sql3 ="UPDATE `produse` SET `stock` = 0  WHERE `produse`.`id` = ";
+				$sql3 .=$idprod;
+				$sql3 .=" AND `stock` < 0;";
 				if($idprod != NULL)
 					if($cant >0){
 						mysqli_query($conn, $sql);
 						mysqli_query($conn, $sql2);
+						mysqli_query($conn, $sql3);
 						echo '<script>parent.f2.location.reload();</script>';
 					}
+
 			?>
 			<form action=formoutbound.php method= POST/GET style="margin: 0;
 			  position: absolute;
