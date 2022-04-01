@@ -31,6 +31,7 @@
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere produse</a>
 			<a href="produs_nou.php">Produs nou</a>
+			<a href="sales.php">Schimbari pret</a>
 		</center></div><center>
         <table class="tabelprod" style="zoom: 2; -moz-transform: scale(2); -moz-transform-origin: 0 0;" cellspacing=0>
             <tr class="headtabelprod">

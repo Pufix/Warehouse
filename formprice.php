@@ -13,14 +13,17 @@
 				$idprod = $_REQUEST['idprod'];
 				$ok = 1;
 				$pret = $_REQUEST['cantitate'];
-
-				if($idprod != NULL)
-					if($cant >0){
+				if($idprod != NULL){
+					$array = explode(" ",$pret);
+					///UPDATE `produse` SET `pret` = '1997' WHERE `produse`.`id` = 1
+					$sql= "UPDATE `produse` SET `pret`= `pret`".$array[0]."(`pret`*(".$array[1]."/100)) WHERE `produse`.`id` = ".$idprod;
+					if($array[0]=='+')
 						mysqli_query($conn, $sql);
-						mysqli_query($conn, $sql2);
-						mysqli_query($conn, $sql3);
-						echo '<script>parent.f2.location.reload();</script>';
-					}
+					else
+						if($array[1]<100)
+							mysqli_query($conn, $sql);
+					echo '<script>parent.f2.location.reload();</script>';
+				}
 			?>
 			<form action=formprice.php method= POST/GET style="margin: 0;
 			  position: absolute;
@@ -35,7 +38,7 @@
 					</td></tr>
 					<tr><td>
 						Diferenta pret:<br>
-						<input type="numer" id="cantitate" name="cantitate" placeholder="±*%">
+						<input type="numer" pattern="[+-]+ +[0-9]+ +%" id="cantitate" name="cantitate" placeholder="± numar %">
 					</td></tr>
 					<?php
 						ini_set('display_errors', 'Off');

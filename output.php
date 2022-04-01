@@ -32,6 +32,7 @@
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere produse</a>
 			<a href="produs_nou.php">Produs nou</a>
+			<a href="sales.php">Schimbari pret</a>
 		</center></div>
 		<table width=100% height=80%>
 			<tr width=100% height=100%>

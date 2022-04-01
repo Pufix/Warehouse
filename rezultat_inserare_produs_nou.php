@@ -10,6 +10,7 @@
 		  	<a href="input.php">Primire produse</a>
 		 	<a href="output.php">Trimitere Produse</a>
 			<a href="produs_nou.php">Produs nou</a>
+			<a href="sales.php">Schimbari pret</a>
 		</div>
         <?php
             $conn = new mysqli("localhost","root","","magazin");    
