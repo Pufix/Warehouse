@@ -12,19 +12,24 @@
 				<button class="dropbtn">Produse</button>
 				<div class="dropdown-content">
 					<?php
-						$conn = new mysqli("localhost","root","","depozit_atestat");    
-						if ($conn->connect_error) {
-						  die("Connection failed: " . $conn->connect_error);
-						}
-						$sql="SELECT DISTINCT produse.categorie FROM produse";
-						$result = $conn->query($sql);
-						if ($result->num_rows > 0)
-						  while($row = $result->fetch_assoc()) {
-							echo "<a href='tabel_produse.php?categorie=". $row["categorie"] ."'>". $row["categorie"] ."</a>";
-						  }
-						  else 
-							echo "0 results";
-					?>
+     $conn = new mysqli("localhost", "root", "", "depozit_atestat");
+     if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+     }
+     $sql = "SELECT DISTINCT produse.categorie FROM produse";
+     $result = $conn->query($sql);
+     if ($result->num_rows > 0) {
+         while ($row = $result->fetch_assoc()) {
+             echo "<a href='tabel_produse.php?categorie=" .
+                 $row["categorie"] .
+                 "'>" .
+                 $row["categorie"] .
+                 "</a>";
+         };
+     } else {
+         echo "0 results";
+     }
+     ?>
 				</div>
 			</div>
 		  	<a href="input.php">Primire produse</a>

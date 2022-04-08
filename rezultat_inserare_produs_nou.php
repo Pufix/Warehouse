@@ -13,20 +13,19 @@
 			<a href="sales.php">Schimbari pret</a>
 		</div>
         <?php
-            $conn = new mysqli("localhost","root","","magazin");    
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }
-            $idprod = $_REQUEST['codprod'];
-            $nameprod = $_REQUEST['numeprod'];
-            $idfurn = $_REQUEST['codfurn'];
-            $sql = "INSERT INTO produse (codp, denumire, codf) VALUES ($idprod, '$nameprod', $idfurn)";
-            if(mysqli_query($conn, $sql)){
-                echo "<h3>Date actualizate cu succes!</h3>";
-            } else{
-                echo "ERROR: " 
-                    . mysqli_error($conn);
-            }
+        $conn = new mysqli("localhost", "root", "", "magazin");
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $idprod = $_REQUEST["codprod"];
+        $nameprod = $_REQUEST["numeprod"];
+        $idfurn = $_REQUEST["codfurn"];
+        $sql = "INSERT INTO produse (codp, denumire, codf) VALUES ($idprod, '$nameprod', $idfurn)";
+        if (mysqli_query($conn, $sql)) {
+            echo "<h3>Date actualizate cu succes!</h3>";
+        } else {
+            echo "ERROR: " . mysqli_error($conn);
+        }
         ?>
     </body>
 </html>
