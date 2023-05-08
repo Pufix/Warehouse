@@ -1,2 +1,1 @@
-This is my "atestat" for my high school diploma (sort of a licence but for high school)
-In this work i created a web app that can be used to manage a warehouse
+This is a project i made using php and sql that aim to be able to manage a medium size warehouse with all of it's daily tasks
